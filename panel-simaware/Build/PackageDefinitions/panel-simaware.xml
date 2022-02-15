@@ -1,0 +1,22 @@
+<AssetPackage Name="panel-simaware" Version="2.0.0">
+	<ItemSettings>
+		<ContentType>SPB</ContentType>
+		<Title>panel-simaware</Title>
+		<Manufacturer>Jan Ole Peek</Manufacturer>
+		<Creator>Jan Ole Peek</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<AssetGroups>
+		<AssetGroup Name="panel-simaware">
+			<Type>SPB</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\</AssetDir>
+			<OutputDir>Build\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
