@@ -1,7 +1,8 @@
-"%MSFS_SDK%\Tools\bin\fspackagetool.exe" "panel-simaware\Build\panel-simaware.xml" -nomirroring
-copy /Y "panel-simaware\Build\Packages\panel-simaware\Build\panel-simaware.spb" "panel-simaware\InGamePanels"
-RMDIR "Build\*.*" /S /Q
-TIMEOUT /T 3
-xcopy /e /v "panel-simaware" "Build\panel-simaware\" /y /s
-TIMEOUT /T 3
-RMDIR "Build\panel-simaware\Build" /S /Q
+@ECHO OFF
+rmdir /S /Q .\Packages
+"%MSFS_SDK%\Tools\bin\fspackagetool.exe" package.xml
+IF "%1"=="/c" GOTO Copy
+GOTO Exit
+:Copy
+xcopy /I /E /Y .\Packages\panel-simaware "C:\MSFS Community Addons\panel-simaware"
+:Exit
